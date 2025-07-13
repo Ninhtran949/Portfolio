@@ -5,7 +5,7 @@ const projectsData = [{
   "id": 1,
   "title": "Admin Bookify Website",
   "description": "Admin page for book selling system, built with traditional HTML, CSS, JavaScript. Supports book management, catalogs, orders and inventory statistics.",
-  "image": "/public/admin.png",
+  "image": "/admin.png",
   "tags": [
     "JavaScript",
     "HTML",
@@ -18,7 +18,7 @@ const projectsData = [{
   id: 2,
   title: 'Bookify Website',
   description: 'A responsive web bookstore for end users, featuring user authentication, book catalog, shopping cart, order management, and modern UI built with React and TypeScript.',
-  image: '/public/webuser.png',
+  image: '/webuser.png',
   tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS'],
   link: 'https://bookifynt.vercel.app',
   github: 'https://github.com/Ninhtran949/WebUser'
@@ -26,7 +26,7 @@ const projectsData = [{
   id: 3,
   title: 'Portfolio Website',
   description: 'A personal portfolio website with smooth animations and interactive elements',
-  image: '/public/prrtfolio.png',
+  image: '/prrtfolio.png',
   tags: ['React', 'Tailwind CSS', 'TypeScript'],
   link: '#',
   github: '#'
@@ -34,7 +34,7 @@ const projectsData = [{
   id: 4,
   title: 'Bookify Application',
   description: 'A modern bookstore application with a sleek UI and real-time data fetching',
-  image: '/public/appuser.png',
+  image: '/appuser.png',
   tags: ['Java', 'MongoDB', 'Express', 'Node.js', 'mongoose','XML'],
   link: '#',
   github: 'https://github.com/Ninhtran949/Book-store-app'
