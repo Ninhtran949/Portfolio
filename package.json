@@ -1,5 +1,5 @@
 {
-  "name": "magic-patterns-vite-template",
+  "name": "Pf",
   "version": "0.0.1",
   "private": true,
   "type": "module",
@@ -10,9 +10,12 @@
     "preview": "npx vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "lucide-react": "^0.441.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-fast-marquee": "^1.6.5",
+    "react-icons": "^5.5.0",
     "react-player": "^2.16.0"
   },
   "devDependencies": {

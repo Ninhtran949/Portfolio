@@ -46,7 +46,7 @@ const About = () => {
             <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mb-6">
               <CodeIcon className="text-white h-8 w-8" />
             </div>
-            <h3 className="text-xl font-bold mb-4">Web Development</h3>
+            <h3 className="text-xl font-bold mb-4">Web & app development</h3>
             <p className="text-gray-600">
               I specialize in creating responsive, interactive websites with
               clean and efficient code. My focus is on delivering exceptional
@@ -78,27 +78,18 @@ const About = () => {
         <div className="mt-16 bg-white p-8 rounded-xl shadow-lg">
           <div className="flex flex-col md:flex-row gap-8">
             <div className="md:w-1/3">
-              <img src="/e03c8553-34d6-43e7-89c5-5f209d2886de.jpg" alt="About Me" className="rounded-xl shadow-md w-full h-auto" />
+              <img src="/e03c8553-34d6-43e7-89c5-5f209d2886de-removebg-preview.png" alt="About Me" className="rounded-xl shadow-md w-full h-auto" />
             </div>
             <div className="md:w-2/3">
               <h3 className="text-2xl font-bold mb-4">My Journey</h3>
               <p className="text-gray-600 mb-4">
-                As a BackEnd Developer based in Hanoi, I've spent the last
-                few years honing my skills in creating beautiful, functional web
-                experiences. My journey in web development started with a
-                curiosity about how websites work and has evolved into a passion
-                for creating digital experiences that delight users.
+                As a backend programmer in Hanoi, I have spent a few years to cultivate the skills of creating beautiful and practical web & apps. My web development and application journey starts with the curiosity about the way the operation of mobile applications and gradually develops into a passion to create digital experiences to satisfy users.
               </p>
               <p className="text-gray-600 mb-4">
-                I specialize in React and modern JavaScript, with a strong focus
-                on creating responsive, accessible, and performant web
-                applications. I'm also experienced in working with design
-                systems, animation libraries, and state management solutions.
+                I specialize in modern MERN Stack, focusing strongly on creating web applications that meet, accessible and high performance. I also have a passion for embedded programming and have completed a few simple products, which helps me better understand how the movement works.
               </p>
               <p className="text-gray-600">
-                When I'm not coding, you can find me exploring new technologies,
-                contributing to open-source projects, or sharing my knowledge
-                with the developer community.
+                When not writing code, you can see that I am exploring new technologies, contributing to open source projects.
               </p>
             </div>
           </div>

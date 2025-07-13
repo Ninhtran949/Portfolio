@@ -47,9 +47,9 @@ const Hero = () => {
                 passionate and dedicated to my work.
               </p>
               <div className="flex flex-wrap gap-4 mt-4">
-                <button className="bg-black text-white px-8 py-4 rounded-lg hover:bg-gray-800 transition-all hover:scale-105 active:scale-95">
+                <a href="#contact" className="bg-black text-white px-8 py-4 rounded-lg hover:bg-gray-800 transition-all hover:scale-105 active:scale-95">
                   Contact Info
-                </button>
+                </a>
                 <button className="border-2 border-black px-8 py-4 rounded-lg hover:bg-black hover:text-white transition-all flex items-center gap-3 hover:scale-105 active:scale-95">
                   <span>Download CV</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -64,8 +64,7 @@ const Hero = () => {
           <div ref={imageRef} className="relative transition-all duration-700 ease-out order-first lg:order-last" style={{
           transform: 'translateX(40px)'
         }}>
-            <div className="absolute -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90%] h-[90%] bg-gray-50 rounded-full"></div>
-            <img src="/e03c8553-34d6-43e7-89c5-5f209d2886de.jpg" alt="Profile" className="w-full max-w-sm mx-auto rounded-2xl shadow-xl hover:scale-105 transition-transform duration-500" />
+            <img src="/e03c8553-34d6-43e7-89c5-5f209d2886de-removebg-preview.png" alt="Profile" className="w-full max-w-sm mx-auto transition-transform duration-500 hover:scale-105" />
           </div>
         </div>
       </div>

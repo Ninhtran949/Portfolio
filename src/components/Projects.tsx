@@ -1,38 +1,54 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { ExternalLinkIcon, GithubIcon } from 'lucide-react';
+import { link } from 'fs';
 const projectsData = [{
-  id: 1,
-  title: 'Admin Bookstore Website',
-  description: 'A fully responsive e-commerce platform built with React and Node.js',
-  image: 'https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
-  tags: ['React', 'Node.js', 'MongoDB', 'Tailwind CSS', 'Express', 'JavaScript', 'API Integration'],
-  link: '#',
-  github: 'https://github.com/Ninhtran949/QLSach'
+  "id": 1,
+  "title": "Admin Bookify Website",
+  "description": "Admin page for book selling system, built with traditional HTML, CSS, JavaScript. Supports book management, catalogs, orders and inventory statistics.",
+  "image": "/admin.png",
+  "tags": [
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "SCSS",
+  ],
+  "link": "#",
+  "github": "https://github.com/Ninhtran949/QLSach"
 }, {
   id: 2,
-  title: 'Task Management App',
-  description: 'A drag-and-drop task management application with team collaboration features',
-  image: 'https://images.unsplash.com/photo-1611224885990-2ae89ebc2d8d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
-  tags: ['React', 'TypeScript', 'Firebase', 'Redux'],
-  link: '#',
-  github: '#'
+  title: 'Bookify Website',
+  description: 'A responsive web bookstore for end users, featuring user authentication, book catalog, shopping cart, order management, and modern UI built with React and TypeScript.',
+  image: '/webuser.png',
+  tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS'],
+  link: 'https://bookifynt.vercel.app',
+  github: 'https://github.com/Ninhtran949/WebUser'
 }, {
   id: 3,
   title: 'Portfolio Website',
   description: 'A personal portfolio website with smooth animations and interactive elements',
-  image: 'https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
-  tags: ['React', 'Framer Motion', 'Tailwind CSS'],
+  image: '/prrtfolio.png',
+  tags: ['React', 'Tailwind CSS', 'TypeScript'],
   link: '#',
   github: '#'
 }, {
   id: 4,
-  title: 'Bookstore Application',
+  title: 'Bookify Application',
   description: 'A modern bookstore application with a sleek UI and real-time data fetching',
-  image: 'https://images.unsplash.com/photo-1592210454359-9043f067919b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
-  tags: ['Java', 'API Integration', 'MongoDB', 'JavaScript', 'Express', 'Node.js', 'mongoose','XML'],
+  image: '/appuser.png',
+  tags: ['Java', 'MongoDB', 'Express', 'Node.js', 'mongoose','XML'],
   link: '#',
   github: 'https://github.com/Ninhtran949/Book-store-app'
+}, {
+  id: 5,
+  title: 'Expense Management Application',
+  description: 'Monthly expense planning and management app. Track spent bills.',
+  image: 'https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+  tags: ['Java', , 'Firebase', 'Sqlite'],
+  link: '#',
+  github: 'https://github.com/Ninhtran949/ArQLCT'
 }];
+
+
 const Projects = () => {
   const [activeProject, setActiveProject] = useState<number | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
