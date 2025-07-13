@@ -64,7 +64,7 @@ const Hero = () => {
           <div ref={imageRef} className="relative transition-all duration-700 ease-out order-first lg:order-last" style={{
           transform: 'translateX(40px)'
         }}>
-            <img src="/e03c8553-34d6-43e7-89c5-5f209d2886de-removebg-preview.png" alt="Profile" className="w-full max-w-sm mx-auto transition-transform duration-500 hover:scale-105" />
+            <img src="/public/e03c8553-34d6-43e7-89c5-5f209d2886de-removebg-preview.png" alt="Profile" className="w-full max-w-sm mx-auto transition-transform duration-500 hover:scale-105" />
           </div>
         </div>
       </div>

@@ -78,7 +78,7 @@ const About = () => {
         <div className="mt-16 bg-white p-8 rounded-xl shadow-lg">
           <div className="flex flex-col md:flex-row gap-8">
             <div className="md:w-1/3">
-              <img src="/e03c8553-34d6-43e7-89c5-5f209d2886de-removebg-preview.png" alt="About Me" className="rounded-xl shadow-md w-full h-auto" />
+              <img src="/public/e03c8553-34d6-43e7-89c5-5f209d2886de-removebg-preview.png" alt="About Me" className="rounded-xl shadow-md w-full h-auto" />
             </div>
             <div className="md:w-2/3">
               <h3 className="text-2xl font-bold mb-4">My Journey</h3>
