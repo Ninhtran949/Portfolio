@@ -12,7 +12,7 @@ const projectsData = [{
     "CSS",
     "SCSS",
   ],
-  "link": "#",
+  "link": "",
   "github": "https://github.com/Ninhtran949/QLSach"
 }, {
   id: 2,
@@ -28,15 +28,15 @@ const projectsData = [{
   description: 'A personal portfolio website with smooth animations and interactive elements',
   image: '/prrtfolio.png',
   tags: ['React', 'Tailwind CSS', 'TypeScript'],
-  link: '#',
-  github: '#'
+  link: '',
+  github: 'https://github.com/Ninhtran949/Portfolio'
 }, {
   id: 4,
   title: 'Bookify Application',
   description: 'A modern bookstore application with a sleek UI and real-time data fetching',
   image: '/appuser.png',
   tags: ['Java', 'MongoDB', 'Express', 'Node.js', 'mongoose','XML'],
-  link: '#',
+  link: '',
   github: 'https://github.com/Ninhtran949/Book-store-app'
 }, {
   id: 5,
@@ -44,7 +44,7 @@ const projectsData = [{
   description: 'Monthly expense planning and management app. Track spent bills.',
   image: 'https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
   tags: ['Java', , 'Firebase', 'Sqlite'],
-  link: '#',
+  link: '',
   github: 'https://github.com/Ninhtran949/ArQLCT'
 }];
 
