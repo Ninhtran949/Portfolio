@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { ExternalLinkIcon, GithubIcon } from 'lucide-react';
-import { link } from 'fs';
+import { useNavigate } from 'react-router-dom';
 const projectsData = [{
   "id": 1,
   "title": "Admin Bookify Website",
@@ -51,6 +51,7 @@ const projectsData = [{
 
 const Projects = () => {
   const [activeProject, setActiveProject] = useState<number | null>(null);
+  const navigate = useNavigate();
   const sectionRef = useRef<HTMLElement>(null);
   const headingRef = useRef<HTMLHeadingElement>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
@@ -107,12 +108,30 @@ const Projects = () => {
               <div className="relative overflow-hidden h-64">
                 <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-all duration-500 hover:scale-110" />
                 {activeProject === project.id && <div className="absolute inset-0 bg-black/70 flex items-center justify-center gap-4 opacity-0 animate-fadeIn">
-                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-white flex items-center justify-center hover:bg-gray-100 transition-all">
-                      <ExternalLinkIcon className="w-5 h-5" />
-                    </a>
-                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-white flex items-center justify-center hover:bg-gray-100 transition-all">
-                      <GithubIcon className="w-5 h-5" />
-                    </a>
+                    {project.link ? (
+                      <a href={project.link} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-white flex items-center justify-center hover:bg-gray-100 transition-all">
+                        <ExternalLinkIcon className="w-5 h-5" />
+                      </a>
+                    ) : (
+                      <button 
+                        onClick={() => navigate('/404')} 
+                        className="w-12 h-12 rounded-full bg-white flex items-center justify-center hover:bg-gray-100 transition-all"
+                      >
+                        <ExternalLinkIcon className="w-5 h-5" />
+                      </button>
+                    )}
+                    {project.github ? (
+                      <a href={project.github} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-white flex items-center justify-center hover:bg-gray-100 transition-all">
+                        <GithubIcon className="w-5 h-5" />
+                      </a>
+                    ) : (
+                      <button 
+                        onClick={() => navigate('/404')} 
+                        className="w-12 h-12 rounded-full bg-white flex items-center justify-center hover:bg-gray-100 transition-all"
+                      >
+                        <GithubIcon className="w-5 h-5" />
+                      </button>
+                    )}
                   </div>}
               </div>
               <div className="p-6">

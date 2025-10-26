@@ -3,6 +3,60 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 /* DO NOT DELETE THESE TAILWIND IMPORTS, OTHERWISE THE STYLING WILL NOT RENDER AT ALL */
+
+/* CSS Reset for cross-browser compatibility */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  cursor: none;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  min-height: 100vh;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Fix for consistent image/svg rendering */
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font: inherit;
+}
+
+@media (pointer: coarse) {
+  body {
+    cursor: auto;
+  }
+}
+
+/* 3D Transform perspective for icons */
+.animate-float,
+.animate-float-delay-1,
+.animate-float-delay-2,
+.animate-float-delay-3 {
+  transform-style: preserve-3d;
+}
+
 @keyframes wave {
   0% { transform: rotate(0deg); }
   10% { transform: rotate(14deg); }
@@ -13,28 +67,18 @@
   60% { transform: rotate(0deg); }
   100% { transform: rotate(0deg); }
 }
+
 .animate-wave {
   animation: wave 2.5s infinite;
   transform-origin: 70% 70%;
+  display: inline-block;
 }
+
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
+
 .animate-fadeIn {
   animation: fadeIn 1s forwards;
-}
-html {
-  scroll-behavior: smooth;
-}
-body {
-  cursor: none;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
-@media (pointer: coarse) {
-  body {
-    cursor: auto;
-  }
 }

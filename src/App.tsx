@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -9,25 +10,12 @@ import SocialSidebar from './components/SocialSidebar';
 import Cursor from './components/Cursor';
 import Footer from './components/Footer';
 import IntroSequence from './components/IntroSequence';
-export function App() {
-  const [loading, setLoading] = useState(true);
-  const [showIntro, setShowIntro] = useState(true);
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-    return () => clearTimeout(timer);
-  }, []);
-  if (loading) {
-    return <div className="fixed inset-0 bg-black flex items-center justify-center">
-        <div className="text-white text-4xl font-bold animate-pulse">
-          Loading<span className="animate-bounce inline-block">.</span>
-          <span className="animate-bounce inline-block delay-100">.</span>
-          <span className="animate-bounce inline-block delay-200">.</span>
-        </div>
-      </div>;
-  }
-  return <>
+import NotFound from './components/NotFound';
+
+// Main Home Component
+const HomePage = ({ showIntro, setShowIntro }: { showIntro: boolean; setShowIntro: (val: boolean) => void }) => {
+  return (
+    <>
       {showIntro && <IntroSequence onComplete={() => setShowIntro(false)} />}
       <div className={`bg-white min-h-screen w-full ${!showIntro ? 'animate-fadeIn' : ''}`}>
         <Cursor />
@@ -42,5 +30,37 @@ export function App() {
         </main>
         <Footer />
       </div>
-    </>;
+    </>
+  );
+};
+
+export function App() {
+  const [loading, setLoading] = useState(true);
+  const [showIntro, setShowIntro] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <div className="fixed inset-0 bg-black flex items-center justify-center">
+        <div className="text-white text-4xl font-bold animate-pulse">
+          Loading<span className="animate-bounce inline-block">.</span>
+          <span className="animate-bounce inline-block delay-100">.</span>
+          <span className="animate-bounce inline-block delay-200">.</span>
+        </div>
+      </div>;
+  }
+
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage showIntro={showIntro} setShowIntro={setShowIntro} />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Router>
+  );
 }

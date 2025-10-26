@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+
 const Hero = () => {
   const headingRef = useRef<HTMLHeadingElement>(null);
   const textRef = useRef<HTMLParagraphElement>(null);
@@ -30,11 +31,10 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="flex flex-col items-start pt-20 lg:pt-0">
             <div className="space-y-6">
-              <h1 ref={headingRef} className="text-5xl md:text-6xl lg:text-7xl font-bold transition-all duration-700 ease-out" style={{
+              <h1 ref={headingRef} className="text-4xl md:text-5xl lg:text-6xl font-bold transition-all duration-700 ease-out" style={{
               transform: 'translateY(40px)'
             }}>
-                Hello I'm Ninh{' '}
-                <div className="inline-block animate-wave h-12 w-12 ml-2" />
+                Hello I'm Ninh <span className="inline-block animate-wave text-4xl md:text-5xl">👋</span>
               </h1>
               <div className="flex items-center gap-4"> 
               <div className="h-1 w-16 bg-black"></div>
@@ -61,10 +61,22 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          <div ref={imageRef} className="relative transition-all duration-700 ease-out order-first lg:order-last" style={{
+          <div ref={imageRef} className="relative transition-all duration-700 ease-out order-first lg:order-last flex items-center justify-center" style={{
           transform: 'translateX(40px)'
         }}>
-            <img src="/e03c8553-34d6-43e7-89c5-5f209d2886de-removebg-preview.png" alt="Profile" className="w-full max-w-sm mx-auto transition-transform duration-500 hover:scale-105" />
+            {/* Container with profile image */}
+            <div className="relative w-full max-w-md mx-auto">
+              {/* Circular profile image */}
+              <div className="relative z-10 w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 mx-auto">
+                <div className="w-full h-full rounded-full overflow-hidden border-8 border-white shadow-2xl bg-white">
+                  <img 
+                    src="/e03c8553-34d6-43e7-89c5-5f209d2886de-removebg-preview.png" 
+                    alt="Profile" 
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-110" 
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
